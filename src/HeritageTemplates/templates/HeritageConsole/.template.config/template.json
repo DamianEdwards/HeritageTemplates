@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Microsoft",
+    "classifications": [
+      "Web",
+      "API"
+    ],
+    "name": "Heritage Console",
+    "generatorVersions": "[1.0.0.0-*)",
+    "description": "An empty project template for creating a .NET console application.",
+    "groupIdentity": "HeritageTemplates.Console",
+    "precedence": "8000",
+    "identity": "HeritageTemplates.Console.CSharp.0.1",
+    "shortName": "heritageconsole",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    },
+    "sourceName": "Company.ConsoleApp1",
+    "preferNameDirectory": true,
+    "guids": [
+      "53bc9b9d-9d6a-45d4-8429-2a2761773502"
+    ],
+    "sources": [
+      {
+        "modifiers": [
+        ]
+      }
+    ],
+    "symbols": {
+      "Framework": {
+        "type": "parameter",
+        "description": "The target framework for the project.",
+        "datatype": "choice",
+        "choices": [
+          {
+            "choice": "net6.0",
+            "description": "Target net6.0"
+          }
+        ],
+        "replaces": "net6.0",
+        "defaultValue": "net6.0"
+      },
+      "skipRestore": {
+        "type": "parameter",
+        "datatype": "bool",
+        "description": "If specified, skips the automatic restore of the project on create.",
+        "defaultValue": "false"
+      }
+    },
+    "primaryOutputs": [
+      {
+        "path": "Company.ConsoleApp1.csproj"
+      }
+    ],
+    "defaultName": "ConsoleApp",
+    "postActions": [
+      {
+        "condition": "(!skipRestore)",
+        "description": "Restore NuGet packages required by this project.",
+        "manualInstructions": [
+          {
+            "text": "Run 'dotnet restore'"
+          }
+        ],
+        "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+        "continueOnError": true
+      }
+    ]
+  }
